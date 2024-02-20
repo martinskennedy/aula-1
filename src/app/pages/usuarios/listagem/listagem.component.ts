@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./listagem.component.css']
 })
 export class ListagemUsuariosComponent {
-
+  tituloDaPagina: String = 'Usuários';
 }
