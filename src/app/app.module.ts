@@ -6,9 +6,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ListagemUsuariosComponent } from './pages/usuarios/listagem/listagem.component';
-import { CadastroEdicaoComponent } from './pages/usuarios/cadastro-edicao/cadastro-edicao.component';
+import { CadastroEdicaoUsuariosComponent } from './pages/usuarios/cadastro-edicao/cadastro-edicao.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageTitleComponent } from './components/page-title/page-title.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,16 @@ import { PageTitleComponent } from './components/page-title/page-title.component
     HeaderComponent,
     FooterComponent,
     ListagemUsuariosComponent,
-    CadastroEdicaoComponent,
+    CadastroEdicaoUsuariosComponent,
     HomeComponent,
     PageTitleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
