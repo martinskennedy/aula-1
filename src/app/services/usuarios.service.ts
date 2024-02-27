@@ -15,7 +15,14 @@ export class UsuariosService {
     return this.http.get<IUsuario[]>(this.api);
   }
 
-  cadastrarUsuario(usuario: IUsuario) {
+  buscarUsuarioPorId(id: number) {
+    return this.http.get<IUsuario>(`${this.api}/${id}`);
+  }
+
+  cadastrarEditarUsuario(usuario: IUsuario) {
+    if (usuario.id) {
+      return this.http.put(`${this.api}/${usuario.id}`, usuario)
+    }
     return this.http.post(this.api, usuario);
   }
 

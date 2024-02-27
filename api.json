@@ -13,16 +13,13 @@
       "ativo": false
     },
     {
-      "nome": "Usuario 1",
-      "idade": 32,
+      "nome": "Teste 1",
+      "idade": 23,
       "ativo": true,
       "id": 3
     }
   ],
-
   "produtos": [
-    {
-      
-    }
+    {}
   ]
 }
