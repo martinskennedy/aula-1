@@ -18,4 +18,16 @@ describe('PageTitleComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should title with correct class', () => {
+    const title = fixture.nativeElement.querySelector('h1.display-6');
+    expect(title).toBeTruthy();
+  });
+
+  it('should title with correct prop', () => {
+    component.title = 'Meu novo título';
+    fixture.detectChanges();
+    const title = fixture.nativeElement.querySelector('h1.display-6');
+    expect(title.innerText).toEqual(component.title);
+  });
 });
