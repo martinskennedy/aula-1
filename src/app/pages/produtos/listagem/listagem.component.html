@@ -21,7 +21,7 @@
         <td>{{produto.nomeProduto}}</td>
         <td>{{produto.codigoBarras}}</td>
         <td>{{produto.quantidade}}</td>
-        <td>{{produto.preco}}</td>
+        <td>{{produto.preco | currency:'BRL'}}</td>
         <td>{{produto.ativo ? "Ativo" : "Desativado"}}</td>
         <td>
           <button type="button" class="btn btn-danger btn-sm" (click)="removerProduto(produto.id || 0)">Remover</button>

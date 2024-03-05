@@ -15,12 +15,12 @@ export class CadastroEdicaoProdutosComponent {
   constructor(private produtosService: ProdutosService, private router: Router, private route: ActivatedRoute) {
 
   }
-  
+    produto  = {} as IProduto;
     produtoForm = new FormGroup({
       nomeProduto: new FormControl('', Validators.required),
-      codigoBarras: new FormControl(),
-      quantidade: new FormControl(),
-      preco: new FormControl(),
+      codigoBarras: new FormControl('', [Validators.required, Validators.minLength(10)]),
+      quantidade: new FormControl(0, [Validators.required, Validators.pattern(/^\d+$/)]), // garante que seja um número
+      preco: new FormControl(0, [Validators.required, Validators.pattern(/^\d+(\.\d{1,2})?$/)]) // garante que seja número com 2 casas decimais
     });
   
     id: number = 0;

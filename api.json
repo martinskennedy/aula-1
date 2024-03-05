@@ -13,7 +13,7 @@
       "ativo": false
     },
     {
-      "nome": "Teste 1",
+      "nome": "Teste 2",
       "idade": 23,
       "ativo": true,
       "id": 3
@@ -34,6 +34,14 @@
       "preco": "1000",
       "ativo": true,
       "id": 2
+    },
+    {
+      "nomeProduto": "Teste",
+      "codigoBarras": "3333333333",
+      "quantidade": "12",
+      "preco": 1215,
+      "ativo": true,
+      "id": 3
     }
   ]
 }
